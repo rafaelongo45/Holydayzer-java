@@ -29,8 +29,16 @@ public class Holydayzer {
 
     if(holidayName != ""){
       return holidayName;
-    }else{
-      return "Nesse dia não tem feriado";
+    }
+
+    return "Nesse dia não tem feriado";
+  }
+
+  public void getAllHolydays(){
+    for(int i = 0; i < holydaysList.size(); i++){
+      String holydayDate = this.holydaysList.get(i).date;
+      String holydayName = this.holydaysList.get(i).name;
+      System.out.println(holydayDate + " - " + holydayName);
     }
   }
 }
